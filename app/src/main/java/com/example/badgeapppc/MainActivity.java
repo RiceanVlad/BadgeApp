@@ -1,5 +1,6 @@
 package com.example.badgeapppc;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,11 +11,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,12 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
     Button createAcc, login;
     EditText emailMain, passwordMain;
-
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference();
-
-    public List<String> emails = new ArrayList<String>();
-    public List<String> parole = new ArrayList<String>();
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private CollectionReference utilizatori = db.collection("users");
+    private final String TAG = "vlad";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         emailMain = (EditText) findViewById(R.id.editTextEmail);
         passwordMain = (EditText) findViewById(R.id.editTextPassword);
 
-        extrageEmailuriSiParole();
         butoane();
 
     }
@@ -49,12 +51,33 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(verificareAutentificare()){
-                    Intent intent = new Intent(MainActivity.this, FirstActivity.class);
-                    startActivity(intent);
-                }else{
-                    Toast.makeText(MainActivity.this,"Your login credentials don't match an account in our system.",Toast.LENGTH_LONG).show();
-                }
+                String email = emailMain.getText().toString();
+                String parola = passwordMain.getText().toString();
+
+                /////////////////////////////////////////////////////////////////////
+
+                db.collection("users")
+                        .whereEqualTo("email",email)
+                        .whereEqualTo("parola", parola)
+                        .get()
+                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                if (task.isSuccessful()) {
+                                    if(task.getResult().size()>0){
+                                        Intent intent = new Intent(MainActivity.this, FirstActivity.class);
+                                        startActivity(intent);
+                                    }else{
+                                        Toast.makeText(MainActivity.this,"Your login credentials don't match an account in our system.",Toast.LENGTH_LONG).show();
+                                    }
+                                } else {
+                                    Log.d(TAG, "Error getting documents: ", task.getException());
+                                }
+                            }
+                        });
+
+                /////////////////////////////////////////////////////////////////////
+
             }
         });
         createAcc.setOnClickListener(new View.OnClickListener() {
@@ -66,35 +89,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private boolean verificareAutentificare(){
-        String email = emailMain.getText().toString();
-        String parola = passwordMain.getText().toString();
-
-        for(int i=0;i<emails.size();i++){
-            if(email.equals(emails.get(i)) && parola.equals(parole.get(i)))
-                return true;
-        }
-        return false;
-    }
-
-    private void extrageEmailuriSiParole(){
-        // Read from the database
-        myRef.addValueEventListener(new ValueEventListener() {
-            private static final String TAG = "vlad";
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                int lungime = (int) dataSnapshot.child("users").getChildrenCount();
-                for(int i=1;i<=lungime;i++){
-                    String email = String.valueOf(dataSnapshot.child("users").child(String.valueOf(i)).child("email").getValue());
-                    String parola = String.valueOf(dataSnapshot.child("users").child(String.valueOf(i)).child("password").getValue());
-                    emails.add(email);
-                    parole.add(parola);
-                }
-            }
-            @Override
-            public void onCancelled(DatabaseError error) {
-                Log.w(TAG, "Failed to read value.", error.toException());
-            }
-        });
-    }
 }
