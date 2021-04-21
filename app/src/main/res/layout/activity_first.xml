@@ -7,27 +7,61 @@
     android:background="@drawable/backgroundfirst"
     tools:context=".FirstActivity">
 
-    <Button
-        android:id="@+id/buttonAlegeDepartament"
-        android:layout_width="152dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="129dp"
-        android:layout_marginEnd="130dp"
-        android:text="Choose department"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.152" />
-
     <Spinner
         android:id="@+id/spinnerAlegeDepartament"
         android:layout_width="221dp"
         android:layout_height="50dp"
+        android:layout_marginTop="8dp"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toEndOf="@+id/buttonAlegeDepartament"
-        app:layout_constraintStart_toStartOf="@+id/buttonAlegeDepartament"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAlegeDepartament" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewAlegeDepartament"
+        app:layout_constraintStart_toStartOf="@+id/textViewAlegeDepartament"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAlegeDepartament" />
+
+    <Spinner
+        android:id="@+id/spinnerAlegeEchipa"
+        android:layout_width="221dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="@+id/textViewAlegeEchipa"
+        app:layout_constraintStart_toStartOf="@+id/textViewAlegeEchipa"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAlegeEchipa" />
+
+    <TextView
+        android:id="@+id/textViewAlegeDepartament"
+        android:layout_width="133dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="97dp"
+        android:layout_marginEnd="139dp"
+        android:text="Choose department"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewAlegeEchipa"
+        android:layout_width="127dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="476dp"
+        android:text="Choose team"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonAlegeEchipaSiDep"
+        android:layout_width="133dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="302dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="44dp"
+        android:text="Choose department and team"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
