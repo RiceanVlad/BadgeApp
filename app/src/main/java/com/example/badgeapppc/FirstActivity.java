@@ -16,12 +16,15 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -34,18 +37,28 @@ public class FirstActivity extends AppCompatActivity {
     Button alegeEchipaSiDep;
     private String depAles = "";
     private String echipaAleasa = "";
-
+    String userId = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
+        userId = getIntent().getStringExtra("id");
+
         alegeEchipaSiDep = findViewById(R.id.buttonAlegeEchipaSiDep);
 
         extragDepartamente();
 
         butoane();
+
+    }
+
+    private void adaugaUtilizatoriInDepartamenteSiEchipe(){
+        DocumentReference ref = db.collection("departamente").document(depAles);
+
+        ref.update(echipaAleasa, FieldValue.arrayUnion(userId));
+
     }
 
     private void butoane(){
@@ -53,6 +66,8 @@ public class FirstActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG,depAles + " " + echipaAleasa);
+                adaugaUtilizatoriInDepartamenteSiEchipe();
+                Toast.makeText(FirstActivity.this,"Clicked.",Toast.LENGTH_LONG).show();
             }
         });
     }

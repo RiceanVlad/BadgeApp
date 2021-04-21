@@ -20,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
@@ -65,7 +66,12 @@ public class MainActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                                 if (task.isSuccessful()) {
                                     if(task.getResult().size()>0){
+                                        String id = "";
+                                        for(QueryDocumentSnapshot document : task.getResult()){
+                                            id = document.getId();
+                                        }
                                         Intent intent = new Intent(MainActivity.this, FirstActivity.class);
+                                        intent.putExtra("id",id);
                                         startActivity(intent);
                                     }else{
                                         Toast.makeText(MainActivity.this,"Your login credentials don't match an account in our system.",Toast.LENGTH_LONG).show();
