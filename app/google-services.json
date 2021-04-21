@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "601168782535",
+    "firebase_url": "https://badgeapppc-default-rtdb.firebaseio.com",
+    "project_id": "badgeapppc",
+    "storage_bucket": "badgeapppc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601168782535:android:3ee18ecdc191fe18d78ae2",
+        "android_client_info": {
+          "package_name": "com.example.badgeapppc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "601168782535-8jchvnb0vt14vdaq8pmdep3c339pgl16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFI89g6CrWLqbUq7PuX_hSut5JcCMvaJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "601168782535-8jchvnb0vt14vdaq8pmdep3c339pgl16.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
