@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                                         for(QueryDocumentSnapshot document : task.getResult()){
                                             id = document.getId();
                                         }
-                                        Intent intent = new Intent(MainActivity.this, FirstActivity.class);
+                                        Intent intent = new Intent(MainActivity.this, NavigationActivity.class);
                                         intent.putExtra("id",id);
                                         startActivity(intent);
                                     }else{
