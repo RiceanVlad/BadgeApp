@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -28,8 +29,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button createAcc, login;
+    Button login;
     EditText emailMain, passwordMain;
+    TextView createAcc;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference utilizatori = db.collection("users");
     private final String TAG = "vlad";
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        createAcc = (Button) findViewById(R.id.buttonCreateAccount);
+        createAcc = (TextView) findViewById(R.id.textViewCreateAcc);
         login = (Button) findViewById(R.id.buttonLogin);
         emailMain = (EditText) findViewById(R.id.editTextEmail);
         passwordMain = (EditText) findViewById(R.id.editTextPassword);

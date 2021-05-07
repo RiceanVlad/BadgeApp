@@ -123,7 +123,7 @@ public class CreareContActivity extends AppCompatActivity {
     public boolean isAlpha(String name) {
         char[] chars = name.toCharArray();
         for (char c : chars) {
-            if(!Character.isLetter(c)) {
+            if(!Character.isLetter(c) && !Character.isSpaceChar(c)) {
                 return false;
             }
         }
