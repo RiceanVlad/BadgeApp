@@ -36,7 +36,6 @@ import static android.app.Activity.RESULT_OK;
 
 public class ProfilFragment extends Fragment {
 
-
     EditText newNume, newEmail, newParola;
     ImageView imageViewProfil;
     Button buttonModific;
@@ -57,7 +56,6 @@ public class ProfilFragment extends Fragment {
 
         NavigationActivity activity=(NavigationActivity)getActivity();
         id=activity.getMyId();
-        Log.d("EMA",id+" in profilFragment");
 
         newNume = (EditText) root.findViewById(R.id.editTextProfilName);
         newEmail= (EditText) root.findViewById(R.id.editTextProfilEmail);
@@ -68,7 +66,6 @@ public class ProfilFragment extends Fragment {
         puneDateInEditTextDinBD();
         punePozaProfil();
         butoane();
-
         return root;
     }
 
@@ -93,7 +90,6 @@ public class ProfilFragment extends Fragment {
         });
     }
     private void puneDateInEditTextDinBD(){
-
 
         db.collection("users")
                 .get()
