@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ import com.google.android.material.navigation.NavigationView;
 public class NavigationActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
+    String id="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,11 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+       id=getIntent().getStringExtra("id");
+
+        Log.d("EMA",id+" in navigation");
+
 
         if(savedInstanceState == null){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -56,6 +63,7 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
                         new DepartamenteFragment()).commit();
                 break;
             case R.id.nav_profile:
+
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new ProfilFragment()).commit();
                 break;
@@ -76,5 +84,10 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
         } else {
             super.onBackPressed();
         }
+    }
+
+    public String getMyId(){
+
+        return id;
     }
 }
