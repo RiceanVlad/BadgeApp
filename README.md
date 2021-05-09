@@ -119,7 +119,7 @@ Here i will post some screenshots to ilustrate how the app works.
 
 ![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/createacc.png?raw=true)
 
-3. After login
+3. Options after you logged in
 
 ![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/choose.png?raw=true)
 
