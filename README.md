@@ -123,7 +123,7 @@ Here i will post some screenshots to ilustrate how the app works.
 
 ![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/gif.gif?raw=true)
 
-4. This is where you scan the smartphone to gain access to building
+4. This is where you scan the smartphone to gain access to the Nokia building
 
 ![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/scan.png?raw=true)
 
