@@ -32,7 +32,7 @@
   <h3 align="center">Badge App</h3>
 
   <p align="center">
-    Mobile App that replaces phisical cards with smartphones
+    Mobile App that replaces physical cards with smartphones
     <br />
     <a href="https://github.com/RiceanVlad/BadgeApp"><strong>Explore the docs »</strong></a>
     <br />
@@ -75,13 +75,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-I was looking for renting ski equipment mobile apps and couldn't find any so i made my own. The Ski Rental app is about renting ski equipment before you arrive at some ski resort, so they have the equipment up and ready for your arrival.
+ Badge App is a Mobile Application that replaces physical cards for entering Nokia buildings with your smartphone.
 
 Here's why:
-* You spend less time waiting at the ski resort reserving ski equipment
-* It's more convenient, just pay online
-* You can choose your favorite equipment
-* It's coronavirus safe, less people wait in lines :smile:
+* Harder to forget your phone at home in compare to a physical badge
+* It's more convenient, less cards to worry about
+* Can manage access for different departments
 
 ### Built With
 
