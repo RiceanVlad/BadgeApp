@@ -26,7 +26,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/RiceanVlad/BadgeApp">
-    <img src="images/logo.png" alt="Logo" width="150" height="80">
+    <img src="images/logo1.png" alt="Logo" width="170" height="80">
   </a>
 
   <h3 align="center">Badge App</h3>
