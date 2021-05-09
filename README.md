@@ -113,7 +113,7 @@ Here i will post some screenshots to ilustrate how the app works.
 
 1. Login screen
 
-![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/main.png?raw=true)
+![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/main1.png?raw=true)
 
 2. Easy registration
 
