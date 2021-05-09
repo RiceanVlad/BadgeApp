@@ -163,7 +163,7 @@ Project Link: [https://github.com/RiceanVlad/BadgeApp](https://github.com/Ricean
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [Pinterest](https://ro.pinterest.com/search/pins/?q=ski%20clipart&rs=typed&term_meta[]=ski%7Ctyped&term_meta[]=clipart%7Ctyped)
+* [icons8](https://icons8.com/icons/set/android)
 * [GitHub Pages](https://pages.github.com)
 
 
