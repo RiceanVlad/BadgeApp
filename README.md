@@ -114,41 +114,27 @@ Here i will post some screenshots to ilustrate how the app works.
 
 1. Login screen
 
-![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/screenshot.png?raw=true)
+![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/main.png?raw=true)
 
-2. Some basic customer choices
+2. Easy registration
 
-![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/first.png?raw=true)
+![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/createacc.png?raw=true)
 
-3. Choosing equipment based on your personal information (height, foot size, sex)
+3. After login
 
 ![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/gif.gif?raw=true)
 
-4. Easy registration in 2 steps
+4. This is where you scan the smartphone to gain access to building
 
-![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/reg1.png?raw=true)
-![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/reg2.png?raw=true)
+![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/scan.png?raw=true)
 
-5. What can the administrator do?
+5. Choose a department and team to join
 
-![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/adminmain.png?raw=true)
+![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/departamente.png?raw=true)
 
-6. Administrator can choose what type of product to add
+6. Manage your profile
 
 ![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/chooseadd.png?raw=true)
-
-7. Example of adding a helmet
-
-![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/addhelmet.png?raw=true)
-
-8. Administrator can remove products from the database
-
-![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/delete.png?raw=true)
-
-9. The administrator can return products through barcode/QR scanning so that they can be rented again.
-
-![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/scan2.png?raw=true)
-![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/scan1.png?raw=true)
 
 
 <!-- CONTRIBUTING -->
