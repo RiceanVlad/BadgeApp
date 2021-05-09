@@ -134,7 +134,7 @@ Here i will post some screenshots to ilustrate how the app works.
 
 6. Manage your profile
 
-![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/chooseadd.png?raw=true)
+![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/profil.jpg?raw=true)
 
 
 <!-- CONTRIBUTING -->
