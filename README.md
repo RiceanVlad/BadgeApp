@@ -134,8 +134,6 @@ Here i will post some screenshots to ilustrate how the app works.
 
 6. Manage your profile
 
-![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/profil.jpg? | width = 100)
-
 <a href="https://github.com/RiceanVlad/BadgeApp">
     <img src="images/profil.jpg" alt="profile" width="370" height="750">
   </a>
