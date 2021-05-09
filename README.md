@@ -129,7 +129,7 @@ Here i will post some screenshots to ilustrate how the app works.
 
 5. Choose a department and team to join
 
-![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/departamente.png?raw=true)
+![alt text](https://github.com/RiceanVlad/BadgeApp/blob/main/images/choose.png?raw=true)
 
 6. Manage your profile
 
