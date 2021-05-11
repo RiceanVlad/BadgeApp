@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BadgeAppPC">
         <activity android:name=".NavigationActivity"></activity>
-        <activity android:name=".FirstActivity" />
         <activity
             android:name=".CreareContActivity"
             android:label="@string/title_activity_creare_cont">

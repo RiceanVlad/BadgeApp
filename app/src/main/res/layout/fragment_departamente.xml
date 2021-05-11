@@ -61,7 +61,7 @@
         android:id="@+id/buttonAlegeEchipaSiDep2"
         android:layout_width="304dp"
         android:layout_height="71dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/round_bg"
         android:text="Choose department and team"
         android:textSize="14sp"
@@ -69,5 +69,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/round_border"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="Department password"
+        android:inputType="textPassword"
+        android:padding="8dp"
+        android:paddingStart="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerAlegeEchipa2"
+        app:layout_constraintStart_toStartOf="@+id/spinnerAlegeEchipa2"
         app:layout_constraintTop_toBottomOf="@+id/spinnerAlegeEchipa2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

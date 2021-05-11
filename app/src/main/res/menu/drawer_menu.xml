@@ -5,16 +5,16 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_scan"
-            android:icon="@drawable/ic_lock"
+            android:icon="@drawable/ic_scan"
             android:title="Scan" />
         <item
             android:id="@+id/nav_departamente"
-            android:icon="@drawable/ic_lock"
-            android:title="Departamente" />
+            android:icon="@drawable/ic_departments"
+            android:title="Departments" />
         <item
             android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_lock"
-            android:title="Profil" />
+            android:icon="@drawable/ic_person1"
+            android:title="Profile" />
 
     </group>
 

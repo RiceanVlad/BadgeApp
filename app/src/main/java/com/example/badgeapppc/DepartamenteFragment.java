@@ -50,7 +50,7 @@ public class DepartamenteFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_departamente,container,false);
 
         NavigationActivity activity = (NavigationActivity) getActivity();
-        userId = activity.getMyData();
+        userId = activity.getMyId();
 
         Log.d(TAG,"dep fragment: " + userId);
 
@@ -77,11 +77,14 @@ public class DepartamenteFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Log.d(TAG,depAles + " " + echipaAleasa);
+
                 adaugaUtilizatoriInDepartamenteSiEchipe();
                 Toast.makeText(getActivity(), "Success", Toast.LENGTH_SHORT).show();
+
             }
         });
     }
+
 
     private void extragEchipe(String departament){
         db.collection("departamente")
