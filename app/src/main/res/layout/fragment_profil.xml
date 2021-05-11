@@ -8,28 +8,32 @@
 
     <ImageView
         android:id="@+id/imageViewProfil"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/add_photo_profil" />
 
     <EditText
         android:id="@+id/editTextProfilName"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="16dp"
+        android:background="@drawable/round_border"
+        android:drawableStart="@drawable/person_profil"
+        android:drawablePadding="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewProfil" />
 
@@ -38,9 +42,12 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="25dp"
+        android:background="@drawable/round_border"
+        android:drawableStart="@drawable/email_profil"
+        android:drawablePadding="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="@+id/editTextProfilName"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/editTextProfilName"
@@ -51,9 +58,12 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="25dp"
+        android:background="@drawable/round_border"
+        android:drawableStart="@drawable/lock_profil"
+        android:drawablePadding="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="@+id/editTextProfilEmail"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="@+id/editTextProfilEmail"
@@ -61,13 +71,15 @@
 
     <Button
         android:id="@+id/buttonModific"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="156dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="92dp"
+        android:background="@drawable/bg_profil"
         android:text="Change"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.829"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextProfilParola"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="@+id/editTextProfilParola"
+        app:layout_constraintTop_toBottomOf="@+id/editTextProfilParola" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
