@@ -30,8 +30,6 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import java.util.HashMap;
-
 import static android.app.Activity.RESULT_OK;
 
 public class ProfilFragment extends Fragment {
@@ -85,7 +83,6 @@ public class ProfilFragment extends Fragment {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                 Toast.makeText(getActivity(), "It didnt download", Toast.LENGTH_SHORT).show();
             }
         });
     }
